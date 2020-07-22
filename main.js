@@ -10,7 +10,8 @@ var GSheetMerge = require('./GSheetMerge');
 // Creation of a local server
 var server = http.createServer(function(req, res) {
     res.writeHead(200);
-    res.end('Salut tout le monde !');
+    //share link : https://docs.google.com/spreadsheets/d/1o04noCXEf-F3E2O1MgRQQhJLEojNzJ78_pYFWov96Nk/edit?usp=sharing
+    res.end('Refresh this page to merge data in file : https://docs.google.com/spreadsheets/d/1o04noCXEf-F3E2O1MgRQQhJLEojNzJ78_pYFWov96Nk/edit?usp=sharing');
     GSheetMerge.mergeData();
 });
 
