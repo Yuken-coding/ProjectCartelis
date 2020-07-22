@@ -2,7 +2,8 @@
 Tech case project merge data in a Gsheet
 
 If you want to see the front  : Download the code from the branch Feature-app 
-if you want to see the back (merge data) : Download the code from the branch Develop
+
+If you want to see the back (merge data) : Download the code from the branch Develop
 
 To install the nodes_modules of this projet use the npm install in the project folder
 
