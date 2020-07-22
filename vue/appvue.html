@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Cartelis</title>
+</head>
+<body>
+<button onclick="myFunction()" id="firstButton"> Connect API </button>
+
+<p id="scope"></p>
+<p id="scope2"></p>
+<p id="connect"></p>
+
+<p id="duplicate"></p>
+
+
+<script> // Script connexion
+
+    //var connectAPI = require('./modules/connectAPI.js');
+
+    function myFunction() {
+
+        // Required scopes
+        document.getElementById("scope").innerHTML = "You must be a member of Cartelis";
+        document.getElementById("scope2").innerHTML = "These data are only for a professional use";
+
+        // Validation of required scoped
+        var btn = document.createElement("BUTTON");
+        btn.innerHTML = "Confirm all the scopes";
+        document.body.append(btn);
+
+        // Suppression of scope and buttons : display if the access has been garanted by the API
+        btn.onclick = function (){
+            let firstButton = document.getElementById("firstButton");
+            firstButton.remove();
+            let scope1 = document.getElementById("scope");
+            scope1.remove();
+            let scope2 = document.getElementById("scope2");
+            scope2.remove();
+            btn.remove();
+
+            //connectAPI.googleAPI();
+            document.getElementById("connect").innerHTML ="Access has been granted !!!"
+
+            // Script choose the spreadsheet
+
+            // Get data from the API
+
+            // Create Button
+            let nbSpreadSheet = 5; // HardValue
+            for(let indEle=0; indEle < nbSpreadSheet; indEle++){
+                var btnSpread = document.createElement("BUTTON");
+                btnSpread.innerHTML = 'Spreadsheet number' + indEle;
+                document.body.appendChild(btnSpread);
+            }
+
+            // Display the button duplicate when you choose a file
+            // Bug : can only click on the last button
+            btnSpread.onclick = function()
+            {
+
+                var btnDuplicate = document.createElement("BUTTON");
+                btnDuplicate.innerHTML = 'Deduplicate';
+                document.getElementById("duplicate").append(btnDuplicate);
+
+                // Delete spreadsheet button (Doesn't work)
+
+                let nbSpreadSheet = 5; // HardValue
+                for(let indEle=0; indEle < nbSpreadSheet; indEle++){
+                    btnSpread.remove();
+                    btnSpread = btnSpread.children;
+                }
+
+                btnDuplicate.onclick = function(){
+                    // GSheetMerge.mergeData
+                }
+            }
+
+
+        };
+    }
+
+</script>
+</body>
+</html>

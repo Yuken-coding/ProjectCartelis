@@ -7,7 +7,7 @@ module.exports = {
         // Import google module api
         let google = require('googleapis');
         // Import the file which contain the identification token
-        let privatekey = require("./privatekeyGsheet.json");
+        let privatekey = require("../privatekeyGsheet.json");
 
         // configure a JWT auth client
         let jwtClient = new google.google.auth.JWT(

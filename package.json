@@ -9,6 +9,7 @@
   "author": "Alan Mithouard",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "googleapis": "^55.0.0"
   }
 }
